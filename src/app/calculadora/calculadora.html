@@ -1,0 +1,37 @@
+<h1>Bienvenidos a la Calculadora</h1>
+
+<!-- Huecos de los números -->
+<button (click)="hueco_seleccionado.set(1)">
+  {{ boton_selected_1() }}
+</button>
+
+<button (click)="hueco_seleccionado.set(2)">
+  {{ boton_selected_2() }}
+</button>
+
+<br><br>
+
+<h2>Resultado: {{ resultado() }}</h2>
+
+<br>
+
+<!-- Teclado numérico -->
+<button (click)="boton(0)">0</button>
+<button (click)="boton(1)">1</button>
+<button (click)="boton(2)">2</button>
+
+<br>
+
+<button (click)="boton(3)">3</button>
+<button (click)="boton(4)">4</button>
+<button (click)="boton(5)">5</button>
+
+<br>
+
+<button (click)="boton(6)">6</button>
+<button (click)="boton(7)">7</button>
+<button (click)="boton(8)">8</button>
+
+<br>
+
+<button (click)="boton(9)">9</button>

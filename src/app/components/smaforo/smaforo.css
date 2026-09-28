@@ -1,0 +1,30 @@
+.semaforo {
+    border: 2px solid black;
+    width: 50px;
+    height: 150px;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.circulo {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid black; 
+}
+
+.rojo {
+    background-color: red;
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+.verde {
+    background-color: green;
+}
