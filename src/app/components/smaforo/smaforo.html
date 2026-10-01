@@ -1,8 +1,21 @@
 <div class="semaforo">
-    <div class="circulo rojo"></div>
-    <div class="circulo amarillo"></div>
-    <div class="circulo verde"></div>
+    @if(contador() >= 3) {
+        <div class="circulo rojo_enciende"></div>
+    } @else {
+        <div class="circulo rojo"></div>
+    }
 
+    @if(contador() >= 2) {
+        <div class="circulo amarillo_enciende"></div>
+    } @else {
+        <div class="circulo amarillo"></div>
+    }
+    
+    @if(contador() >= 1) {
+        <div class="circulo verde_enciende"></div>
+    } @else {
+        <div class="circulo verde"></div>
+    }
 
 
 
@@ -10,8 +23,18 @@
 
 
 
-<h1> {{contador()}}</h1>
+
+
+<h1 [style]="{ 'color': color(), 'font-weight': peso() }">{{contador()}}</h1>
 
 <button (click)="incrementar()">+1</button>
 <button (click)="decrementar()">-1</button>
 <button (click)="resetear()">Reset</button>
+
+@if (contador() < 0) {
+    <p style="color: rgb(255, 0, 0); font-weight: bold;">El numero es Negativo</p>
+}
+
+@if (contador() > 0) {
+    <p style="color: rgb(0, 184, 0); font-weight: bold;">El numero es Positivo</p>
+}
