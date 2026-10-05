@@ -1,5 +1,8 @@
+<div class="semaforos">
+
+@for(i of cint; track i) {
 <div class="semaforo">
-    @if(contador() >= 3) {
+    @if(contador() >= 1) {
         <div class="circulo rojo_enciende"></div>
     } @else {
         <div class="circulo rojo"></div>
@@ -11,17 +14,14 @@
         <div class="circulo amarillo"></div>
     }
     
-    @if(contador() >= 1) {
+    @if(contador() >= 3) {
         <div class="circulo verde_enciende"></div>
     } @else {
         <div class="circulo verde"></div>
     }
-
-
-
 </div>
-
-
+}
+</div>
 
 
 

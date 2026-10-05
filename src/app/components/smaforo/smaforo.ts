@@ -11,6 +11,7 @@ export class Smaforo {
 contador = signal(0);
 color = signal('black');
 peso = signal('bold');
+cint = [1,2,3,4,5];
 
 
 incrementar() {
@@ -37,6 +38,7 @@ revisarColor() {
     this.color.set('black');
   }
 }
+
 
 
 }

@@ -1,12 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Smaforo } from './components/smaforo/smaforo';
-import { Calculadora } from './calculadora/calculadora';
+import { Calculadora } from './components/calculadora/calculadora';
+import { Lista } from './components/lista/lista';
 
 @Component({
-  imports: [RouterOutlet, Smaforo, Calculadora],
+  imports: [RouterOutlet, Smaforo, Calculadora, Lista],
   selector: 'app-root',
-  styleUrl: './app.css',
+  styleUrl: './app.css',      
   templateUrl: './app.html',
 
 })
