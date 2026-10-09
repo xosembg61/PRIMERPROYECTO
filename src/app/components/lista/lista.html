@@ -3,3 +3,18 @@
 @for (item of items; track item) {
          <li>{{ $index + 1 }} - {{item}}</li>
 }
+
+<h3>Lista de la compra Con Gustar e Imagen</h3>
+
+@for (fruta of lista; track fruta) {
+         <li>{{ $index + 1 }} - 
+            
+            @if (fruta.like) {
+                <img [src]="fruta.imagen" style="width: 32px; height: auto;"> {{fruta.nombre}}:  👍 
+            } @else {
+                <img [src]="fruta.imagen" style="width: 32px; height: auto;"> {{fruta.nombre}}:
+            }
+        </li>
+}
+
+
