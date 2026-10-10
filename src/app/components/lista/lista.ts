@@ -19,6 +19,12 @@ export class Lista {
     new Fruta("Leche", false, "/images/Leche.jpg")
   ];
 
+  personajes:Personaje[] = [
+    new Personaje("Mario", "/images/Mario.jpg", 35, "Plomero"),
+    new Personaje("Luigi", "/images/Luigi.jpg", 32, "Hermano de Mario"),
+    new Personaje("Peach", "/images/Peach.jpg", 28, "Princesa del Reino Champiñón"),
+  ];
+
 }
 
 class Fruta  {
@@ -34,4 +40,20 @@ class Fruta  {
   }
 
 }
+
+class Personaje {
+  nombre: string;
+  imagen: string;
+  edad: number;
+  descripcion: string;
+
+  constructor(nombre: string, imagen: string, edad: number, descripcion: string) {
+    this.nombre = nombre;
+    this.imagen = imagen;
+    this.edad = edad;
+    this.descripcion = descripcion;
+  }
+}
+
+
 
