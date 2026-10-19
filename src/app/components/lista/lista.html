@@ -18,9 +18,10 @@
 }
 
 <h3>Lista de Personajes</h3>
-
 @for (personaje of personajes; track personaje) {
-         <li>{{ $index + 1 }} - <img [src]="personaje.imagen" style="width: 32px; height: auto;"> {{personaje.nombre}}: {{personaje.edad}} - {{personaje.descripcion}}</li>
+<li>
+    {{ $index + 1 }} -
+    <img [src]="personaje.imagen" [alt]="personaje.nombre" style="width: 48px; height: auto;">
+    {{personaje.nombre}}: {{personaje.edad}} - {{personaje.descripcion}}
+</li>
 }
-
-

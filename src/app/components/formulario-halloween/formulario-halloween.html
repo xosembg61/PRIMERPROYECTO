@@ -1,0 +1,35 @@
+<h1>Formulario de Halloween</h1>
+
+<form [formGroup]="formularioHalloween" (ngSubmit)="enviar()">
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre">
+    <br>
+    @if(formularioHalloween.controls.nombre.invalid){
+        <span class="texto-error">El nombre es inválido y debe tener entre 3 y 50 caracteres</span>
+        <br>
+    }@else{
+        <br>
+    }
+ 
+    <label>Email:</label>
+    <input type="email" formControlName="email"> 
+    <br>
+    @if(formularioHalloween.controls.email.invalid){
+        <span class="texto-error">El email es inválido, escribelo bien</span>
+        <br>
+    }@else{
+        <br>
+    } 
+    
+    <label>Edad:</label>
+    <input type="number" formControlName="edad">
+    <br>
+    @if(formularioHalloween.controls.edad.invalid){
+        <span class="texto-error">La edad es inválida y debe ser un número entre 0 y 150</span>
+        <br>
+    }@else{
+        <br>
+    }
+   
+    <button type="submit" [disabled]="formularioHalloween.invalid">Enviar</button>
+</form>

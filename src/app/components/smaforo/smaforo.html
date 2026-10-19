@@ -27,9 +27,9 @@
 
 <h1 [style]="{ 'color': color(), 'font-weight': peso() }">{{contador()}}</h1>
 
-<button (click)="incrementar()">+1</button>
-<button (click)="decrementar()">-1</button>
-<button (click)="resetear()">Reset</button>
+<button matButton="filled" (click)="incrementar()">+1</button>
+<button matButton="tonal" (click)="decrementar()">-1</button>
+<button matButton="elevated" (click)="resetear()">Reset</button>
 
 @if (contador() < 0) {
     <p style="color: rgb(255, 0, 0); font-weight: bold;">El numero es Negativo</p>

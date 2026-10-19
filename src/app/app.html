@@ -1,12 +1,22 @@
-<app-smaforo></app-smaforo>
-<br>
-<hr>
-<br>
-<app-calculadora></app-calculadora>
-<br>
-<hr>
-<br>
-<app-lista></app-lista>
+<mat-toolbar>
+    <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span>Mi APP: </span>
+  <span class="example-spacer"></span>
+
+    <button matButton="elevated"  routerLink="/lista">Lista <mat-icon>favorite</mat-icon></button>
+
+    <button matButton="elevated"  routerLink="/calculadora">Calculadora <mat-icon>calculate</mat-icon></button>
+
+    <button matButton="elevated"  routerLink="/smaforo">Semáforo <mat-icon>traffic</mat-icon></button>
+
+    <button matButton="elevated"  routerLink="/formulario-halloween">Formulario <mat-icon>edit</mat-icon></button>
 
 
-<router-outlet />
+</mat-toolbar>
+<br>
+
+
+<router-outlet></router-outlet>

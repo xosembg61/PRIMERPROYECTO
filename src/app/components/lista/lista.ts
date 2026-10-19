@@ -12,17 +12,17 @@ export class Lista {
 
 
   lista:Fruta[] = [
-    new Fruta("Pan", false, "/images/Pan.jpg"),
-    new Fruta("Nocilla", true, "/images/Nocilla.jpg"),
-    new Fruta("Arroz", false, "/images/Arroz.jpg"),
-    new Fruta("Manzana", true, "/images/Manzana.jpg"),
-    new Fruta("Leche", false, "/images/Leche.jpg")
+    new Fruta("Pan", false, "images/Pan.jpg"),
+    new Fruta("Nocilla", true, "images/Nocilla.jpg"),
+    new Fruta("Arroz", false, "images/Arroz.jpg"),
+    new Fruta("Manzana", true, "images/Manzana.jpg"),
+    new Fruta("Leche", false, "images/Leche.jpg")
   ];
 
   personajes:Personaje[] = [
-    new Personaje("Mario", "/images/Mario.jpg", 35, "Plomero"),
-    new Personaje("Luigi", "/images/Luigi.jpg", 32, "Hermano de Mario"),
-    new Personaje("Peach", "/images/Peach.jpg", 28, "Princesa del Reino Champiñón"),
+    new Personaje("Mario", "images/Mario.jpg", 35, "Plomero"),
+    new Personaje("Luigi", "images/Luigi.jpg", 32, "Hermano de Mario"),
+    new Personaje("Peach", "images/Peach.jpg", 28, "Princesa del Reino Champiñón"),
   ];
 
 }

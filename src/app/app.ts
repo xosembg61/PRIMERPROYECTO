@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Smaforo } from './components/smaforo/smaforo';
-import { Calculadora } from './components/calculadora/calculadora';
-import { Lista } from './components/lista/lista';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
-  imports: [RouterOutlet, Smaforo, Calculadora, Lista],
+  imports: [RouterLink, RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule],
   selector: 'app-root',
   styleUrl: './app.css',      
   templateUrl: './app.html',
