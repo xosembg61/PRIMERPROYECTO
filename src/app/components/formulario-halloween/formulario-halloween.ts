@@ -30,6 +30,24 @@ enviar(){
   const edad = this.formularioHalloween.get('edad')?.value;
 }
 
+tareaformhallowen = new FormGroup({
+  nombre_persona: new FormControl('', { validators: [Validators.required,Validators.minLength(3),Validators.maxLength(50)] }),
+  nombre_objeto: new FormControl('', { validators: [Validators.required, Validators.minLength(3),Validators.maxLength(50)] }),
+  });
+
+objetosHalloween: string[] = [];
+
+enviar_v2(){
+  if (this.tareaformhallowen.invalid) {
+    return;
+  }
+
+  const objeto = this.tareaformhallowen.controls.nombre_objeto.value;
+  if (objeto !== null) {
+    this.objetosHalloween[this.objetosHalloween.length] = objeto;
+  }
 }
 
+
+}
 
