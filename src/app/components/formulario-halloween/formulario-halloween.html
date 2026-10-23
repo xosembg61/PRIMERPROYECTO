@@ -33,3 +33,40 @@
    
     <button type="submit" [disabled]="formularioHalloween.invalid">Enviar</button>
 </form>
+
+
+<br>
+
+<form [formGroup]="tareaformhallowen" (ngSubmit)="enviar_v2()">
+    <label>Nombre de la persona:</label>
+    <input type="text" formControlName="nombre_persona">
+    <br>
+    @if(tareaformhallowen.controls.nombre_persona.invalid){
+        <span class="texto-error">El nombre es inválido y debe tener entre 3 y 50 caracteres</span>
+        <br>
+    }@else{
+        <br>
+    }
+ 
+    <label>Nombre del objeto:</label>
+    <input type="text" formControlName="nombre_objeto"> 
+    <br>
+    @if(tareaformhallowen.controls.nombre_objeto.invalid){
+        <span class="texto-error">El nombre del objeto es inválido y debe tener entre 3 y 50 caracteres</span>
+        <br>
+    }@else{
+        <br>
+    } 
+    
+   
+    <button type="submit" [disabled]="tareaformhallowen.invalid">Enviar</button>
+</form>
+
+<h2>Lista de objetos de Halloween:</h2>
+<ol>
+    @for (registro of objetosHalloween; track $index) {
+        <li>{{ registro.objeto }} - {{ registro.nombre_persona }}</li>
+    }
+</ol>
+
+<br>

@@ -1,0 +1,15 @@
+.texto-error {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+}
+
+form {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.tarjetas {
+    margin: 20px;
+}
