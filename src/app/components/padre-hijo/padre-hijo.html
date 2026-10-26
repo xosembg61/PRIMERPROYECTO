@@ -1,11 +1,13 @@
+
 <h1>🎃 Formulario de Halloween 🎃</h1>
 
-<form [formGroup]="formularioHalloween" (ngSubmit)="enviar(inputImagen)">
-    <label>Imagen:</label>
-    <input #inputImagen type="file" accept="image/*" (change)="seleccionarImagen($event)">
+<form [formGroup]="formularioHalloween" (ngSubmit)="enviar()">
+
+    <label>Imagen (URL):</label>
+    <input type="url" formControlName="imagen" placeholder="https://ejemplo.com/imagen.jpg">
     <br>
     @if (formularioHalloween.controls.imagen.invalid && formularioHalloween.controls.imagen.touched) {
-        <span class="texto-error">Selecciona una imagen</span>
+        <span class="texto-error">Introduce una imagen</span>
         <br>
     }
 
@@ -13,7 +15,7 @@
     <input type="text" formControlName="objeto">
     <br>
     @if (formularioHalloween.controls.objeto.invalid && formularioHalloween.controls.objeto.touched) {
-        <span class="texto-error">El objeto es obligatorio y debe tener entre 3 y 50 caracteres</span>
+        <span class="texto-error">El objeto debe tener entre 3 y 50 caracteres</span>
         <br>
     }
 
@@ -21,7 +23,7 @@
     <textarea formControlName="descripcion"></textarea>
     <br>
     @if (formularioHalloween.controls.descripcion.invalid && formularioHalloween.controls.descripcion.touched) {
-        <span class="texto-error">La descripción es obligatoria y debe tener al menos 10 caracteres</span>
+        <span class="texto-error">La descripción debe tener al menos 10 caracteres</span>
         <br>
     }
 
@@ -29,19 +31,21 @@
     <input type="text" formControlName="propietario">
     <br>
     @if (formularioHalloween.controls.propietario.invalid && formularioHalloween.controls.propietario.touched) {
-        <span class="texto-error">El propietario es obligatorio y debe tener entre 3 y 50 caracteres</span>
+        <span class="texto-error">El propietario debe tener entre 3 y 50 caracteres</span>
         <br>
     }
 
     <button type="submit" [disabled]="formularioHalloween.invalid">Enviar</button>
+
 </form>
 
 <h2>Lista de objetos de Halloween:</h2>
+
 <div class="tarjetas">
     <ng-container *ngFor="let objeto of objetosHalloween">
-        <app-tarjeta-halloween 
+        <app-tarjeta-halloween
             [objeto]="objeto"
             (eliminar)="eliminarObjeto($event)"
         ></app-tarjeta-halloween>
-    </ng-container> 
+    </ng-container>
 </div>

@@ -3,11 +3,9 @@
     <img [src]="objeto.imagen" [alt]="objeto.objeto">
 
     <div class="contenido">
-        <strong>{{ objeto.objeto }}</strong>
-
+        <h3>{{ objeto.objeto }}</h3>
         <p>{{ objeto.descripcion }}</p>
-
-        <span>Propietario: {{ objeto.propietario }}</span>
+        <p class="propietario">Propietario: {{ objeto.propietario }}</p>
 
         <button
             type="button"

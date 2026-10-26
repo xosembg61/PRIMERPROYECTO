@@ -3,10 +3,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ObjetoHalloween } from './objeto-halloween';
 
 @Component({
-  standalone: true,
   selector: 'app-tarjeta-halloween',
+  standalone: true,
   templateUrl: './tarjeta-halloween.html',
-  styleUrl: './tarjeta-halloween.css',
+  styleUrl: './tarjeta-halloween.css'
 })
 export class TarjetaHalloweenComponent {
 

@@ -1,3 +1,4 @@
+
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -12,32 +13,29 @@ import { TarjetaHalloweenComponent } from '../tarjeta-halloween/tarjeta-hallowee
   templateUrl: './padre-hijo.html',
 })
 export class PadreHijo {
+
   formularioHalloween = new FormGroup({
-    imagen: new FormControl('', { validators: [Validators.required] }),
-    objeto: new FormControl('', { validators: [Validators.required, Validators.minLength(3), Validators.maxLength(50)]}),
-    descripcion: new FormControl('', { validators: [Validators.required, Validators.minLength(10)]}),
-    propietario: new FormControl('', { validators: [Validators.required, Validators.minLength(3), Validators.maxLength(50)]}),
+    imagen: new FormControl('', [Validators.required]),
+    objeto: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
+    descripcion: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    propietario: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)])
   });
 
   objetosHalloween: ObjetoHalloween[] = [];
 
-  seleccionarImagen(event: Event): void {
-    const input = event.target;
-    const archivo = input instanceof HTMLInputElement ? input.files?.[0] : undefined;
+  enviar() {
+    if (this.formularioHalloween.valid) {
 
-    if (!archivo || !archivo.type.startsWith('image/')) {
-      this.formularioHalloween.controls.imagen.setValue('');
-      return;
+      const nuevoObjeto: ObjetoHalloween = {
+        imagen: this.formularioHalloween.value.imagen || '',
+        objeto: this.formularioHalloween.value.objeto || '',
+        descripcion: this.formularioHalloween.value.descripcion || '',
+        propietario: this.formularioHalloween.value.propietario || ''
+      };
+
+      this.objetosHalloween.push(nuevoObjeto);
+      this.formularioHalloween.reset();
     }
-
-    const lector = new FileReader();
-    lector.onload = () => {
-      this.formularioHalloween.controls.imagen.setValue(
-        typeof lector.result === 'string' ? lector.result : '',
-      );
-    };
-    lector.onerror = () => this.formularioHalloween.controls.imagen.setValue('');
-    lector.readAsDataURL(archivo);
   }
 
   enviar(inputImagen: HTMLInputElement): void {
