@@ -1,8 +1,16 @@
-<article class="tarjeta">
+
+<div class="tarjeta">
+
     <img [src]="objeto.imagen" [alt]="objeto.objeto">
-    <div>
-        <strong>{{ objeto.objeto }}</strong>
+
+    <div class="informacion">
+        <h3>{{ objeto.objeto }}</h3>
+
         <p>{{ objeto.descripcion }}</p>
-        <span>Propietario: {{ objeto.propietario }}</span>
+
+        <p class="propietario">
+            Propietario: {{ objeto.propietario }}
+        </p>
     </div>
-</article>
+
+</div>
