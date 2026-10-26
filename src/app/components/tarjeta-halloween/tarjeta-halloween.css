@@ -22,3 +22,25 @@ p {
         height: 90px;
     }
 }
+
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btn-eliminar {
+    background-color: #b91c1c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-top: auto;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #7f1d1d;
+}

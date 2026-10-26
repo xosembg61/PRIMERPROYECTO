@@ -39,6 +39,9 @@
 <h2>Lista de objetos de Halloween:</h2>
 <div class="tarjetas">
     <ng-container *ngFor="let objeto of objetosHalloween">
-        <app-tarjeta-halloween [objeto]="objeto"></app-tarjeta-halloween>
-    </ng-container>
+        <app-tarjeta-halloween 
+            [objeto]="objeto"
+            (eliminar)="eliminarObjeto($event)"
+        ></app-tarjeta-halloween>
+    </ng-container> 
 </div>

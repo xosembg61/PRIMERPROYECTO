@@ -52,4 +52,11 @@ export class PadreHijo {
     inputImagen.value = '';
   }
 
+  eliminarObjeto(objeto: ObjetoHalloween): void {
+    const index = this.objetosHalloween.indexOf(objeto);
+    if (index !== -1) {
+      this.objetosHalloween.splice(index, 1);
+    }
+  }
+
 }

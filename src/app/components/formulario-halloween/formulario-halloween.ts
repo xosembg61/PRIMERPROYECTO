@@ -45,5 +45,11 @@ enviar_v2(){
   const { nombre_objeto, nombre_persona } = this.tareaformhallowen.getRawValue();
   this.objetosHalloween.push({ objeto: nombre_objeto ?? '', nombre_persona: nombre_persona ?? '' });
 }
+
+
+
+
+
+
 }
 
