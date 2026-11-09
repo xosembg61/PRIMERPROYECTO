@@ -1,6 +1,7 @@
 mat-toolbar {
 	gap: 8px;
-	background-color: #3f51b5;
+	background-color: var(--app-toolbar-bg);
+	color: var(--app-toolbar-fg);
 }
 
 .example-spacer {
@@ -8,6 +9,6 @@ mat-toolbar {
 }
 
 mat-icon {
-	color: rgb(0, 0, 0);
+	color: inherit;
 	font-weight: bold;
 }

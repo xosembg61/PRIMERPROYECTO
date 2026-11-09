@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+	color-scheme: light;
+	--app-bg: #f3f6f5;
+	--app-surface: #ffffff;
+	--app-text: #1b2927;
+	--app-border: #8b9b97;
+	--app-input-bg: #ffffff;
+	--app-toolbar-bg: #176b61;
+	--app-toolbar-fg: #ffffff;
+}
+
+html.modo-oscuro {
+	color-scheme: dark;
+	--app-bg: #151d1c;
+	--app-surface: #222d2b;
+	--app-text: #e6efed;
+	--app-border: #62736f;
+	--app-input-bg: #17211f;
+	--app-toolbar-bg: #263c38;
+	--app-toolbar-fg: #f1f7f5;
+}
+
+body {
+	min-height: 100%;
+	background-color: var(--app-bg);
+	color: var(--app-text);
+	transition: background-color 180ms ease, color 180ms ease;
+}
+
+button:not([matButton]):not([matIconButton]),
+input,
+textarea,
+select {
+	color: var(--app-text);
+	background-color: var(--app-input-bg);
+	border: 1px solid var(--app-border);
+}
+
+button:not([matButton]):not([matIconButton]) {
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+form {
+	color: var(--app-text);
+	background-color: var(--app-surface);
+}

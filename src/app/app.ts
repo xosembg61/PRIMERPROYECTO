@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ModeService } from './services/mode-service';
 
 @Component({
   imports: [RouterLink, RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule],
@@ -13,4 +14,5 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class App {
   protected readonly title = signal('PrimerProyecto');
+  protected readonly modeService = inject(ModeService);
 }

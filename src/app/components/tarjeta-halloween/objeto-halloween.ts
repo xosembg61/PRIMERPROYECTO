@@ -1,4 +1,3 @@
-
 export interface ObjetoHalloween {
   imagen: string;
   objeto: string;

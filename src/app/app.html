@@ -16,7 +16,13 @@
 
     <button matButton="elevated"  routerLink="/padre-hijo">Padre-Hijo <mat-icon>skull</mat-icon></button>
 
-
+    <button matIconButton
+      type="button"
+      (click)="modeService.cambiar()"
+      [attr.aria-label]="modeService.modo() ? 'Activar modo claro' : 'Activar modo oscuro'"
+      [attr.aria-pressed]="modeService.modo()">
+      <mat-icon>{{ modeService.modo() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
 
 </mat-toolbar>
 <br>
