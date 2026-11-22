@@ -1,0 +1,38 @@
+
+.circulo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #176b61;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.circulo:active {
+  background-color: #0f4c3c;
+  transform: scale(1.025);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.victoria {
+  text-align: center;
+  padding: 30px;
+  border: 2px solid #176b61;
+  border-radius: 15px;
+}
+
+.victoria h1 {
+  color: #176b61;
+  font-size: 36px;
+}
+
+.victoria button {
+  padding: 12px 24px;
+  cursor: pointer;
+}

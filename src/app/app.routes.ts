@@ -4,6 +4,7 @@ import { Lista } from './components/lista/lista';
 import { Smaforo } from './components/smaforo/smaforo';
 import { FormularioHalloween } from './components/formulario-halloween/formulario-halloween';
 import { PadreHijo } from './components/padre-hijo/padre-hijo';
+import { Clicker } from './components/clicker/clicker';
 
 export const routes: Routes = [
 	/*{ path: '', redirectTo: 'lista', pathMatch: 'full' },*/
@@ -12,5 +13,6 @@ export const routes: Routes = [
 	{ path: 'smaforo', component: Smaforo },
 	{ path: 'formulario-halloween', component: FormularioHalloween },
 	{ path: 'padre-hijo', component: PadreHijo },
+	{ path: 'clicker', component: Clicker },
 	{ path: '**', redirectTo: 'index.html' }
 ];

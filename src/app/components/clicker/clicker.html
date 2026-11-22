@@ -1,0 +1,87 @@
+
+@if (GameOver()) {
+
+  <div class="victoria">
+
+    <h1>¡HAS GANADO!</h1>
+
+    <h2>Puntos: {{ puntos() }}</h2>
+
+    <p>Has comprado todos los multiplicadores.</p>
+    <p>Has comprado el autoclicker.</p>
+    <p>Has alcanzado los 250.000 puntos.</p>
+
+    <button (click)="reiniciarJuego()">
+      Reiniciar partida
+    </button>
+
+  </div>
+
+} @else {
+
+  <h1>Clicker Game</h1>
+
+  <h2>Puntos: {{ puntos() }}</h2>
+
+  <h2>Multiplicador: x{{ multiplicador() }}</h2>
+
+  <button class="circulo" type="button" (click)="hacerClick()">
+    CLICK ME!!!
+  </button>
+
+  <h2>Tienda de mejoras</h2>
+
+  <button
+    (click)="comprarMultiplicador(5, 20)"
+    [disabled]="puntos() < 20 || multiplicador() !== 1">
+    Comprar x5 - 20 puntos
+  </button>
+
+  <button
+    (click)="comprarMultiplicador(10, 100)"
+    [disabled]="puntos() < 100 || multiplicador() !== 5">
+    Comprar x10 - 100 puntos
+  </button>
+
+  <button
+    (click)="comprarMultiplicador(50, 500)"
+    [disabled]="puntos() < 500 || multiplicador() !== 10">
+    Comprar x50 - 500 puntos
+  </button>
+
+  <button
+    (click)="comprarMultiplicador(100, 5000)"
+    [disabled]="puntos() < 5000 || multiplicador() !== 50">
+    Comprar x100 - 5000 puntos
+  </button>
+
+  <button
+    (click)="comprarMultiplicador(250, 10000)"
+    [disabled]="puntos() < 10000 || multiplicador() !== 100">
+    Comprar x250 - 10000 puntos
+  </button>
+
+  <button
+    (click)="comprarMultiplicador(500, 100000)"
+    [disabled]="puntos() < 100000 || multiplicador() !== 250">
+    Comprar x500 - 100000 puntos
+  </button>
+
+  <h2>Autoclicker</h2>
+
+  <button
+    (click)="comprarAutoclicker(250)"
+    [disabled]="puntos() < 250 || autoclickerComprado()">
+    Comprar autoclicker - 250 puntos
+  </button>
+
+  @if (autoclickerComprado()) {
+    <p>Autoclicker comprado</p>
+    <p>Generando {{10 * multiplicador()}} puntos por segundo</p>
+  }
+
+  <h2>Objetivo: 250.000 puntos</h2>
+
+  <p>Compra todas las mejoras y consigue los puntos necesarios.</p>
+
+}
